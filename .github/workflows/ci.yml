@@ -18,7 +18,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker images
-        run: docker-compose -f docker-compose.yml build
+        run: docker compose -f docker-compose.yml build
 
       - name: PHP syntax check
-        run: docker-compose run --rm php php -l /usr/share/nginx/html/index.php
+        run: docker compose run --rm php php -l /usr/share/nginx/html/index.php
